@@ -15,7 +15,6 @@ import static org.mockito.Mockito.*;
  * Übung 4 – VerlaengerungsService mit Mock testen.
  * Das VormerkungsRepository (später die Datenbank) gibt es noch nicht –
  * Mockito ersetzt es durch einen Mock.
- *
  * Zwei Tests sind fertig: Lesen Sie sie und führen Sie sie aus.
  * Ergänzen Sie dann den TODO im ersten Test.
  */
@@ -81,7 +80,7 @@ class VerlaengerungsServiceTest {
     @Test
     void verlaengertWennKeineVormerkung() throws Exception {
         // Arrange: Ausleihe anlegen und festlegen, was der Mock antwortet
-        Ausleihe ausleihe = new Ausleihe("T-4711", LocalDate.of(2026, 11, 2));
+        Ausleihe ausleihe = new Ausleihe("T-4711", LocalDate.of(2026, 11, 9));
         when(vormerkungen.existiertVormerkung("T-4711")).thenReturn(false);   // Stubbing
 
         // Act
